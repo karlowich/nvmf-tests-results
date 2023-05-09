@@ -1,0 +1,72 @@
+NVMe/PCIe READ,avg iops,avg lat,cpu,bw
+test script: pcie_read.sh,"223,777",71,99.91%/0.00%,916MB/s
+,"223,979",71,99.91%/0.00%,916MB/s
+,"223,737",71,99.91%/0.00%,916MB/s
+,"223,853",71,99.91%/0.00%,916MB/s
+,"223,847",71,99.91%/0.00%,916MB/s
+NVMe/PCIe WRITE,avg iops,avg lat,cpu,bw
+test script: pcie_write.sh,"38,558",426,99.97%/0.00%,154MB/s
+,"37,616",425,99.96%/0.03%,154MB/s
+,"37,678",424,99.96%/0.00%,154MB/s
+,"37,655",425,99.99%/0.00%,154MB/s
+,"37,671",425,99.96%/0.00%,154MB/s
+NVMe/TCP 1Gbit/s READ,avg iops,avg lat,cpu,bw
+test script: tcp_read.sh,"28,399",563,26.19%/73.75%,116MB/s
+target script: setup_tcp.sh,"28,161",568,26.38%/73.57%,115MB/s
+,"28,158",569,25.98%/73.96%,115MB/s
+,"28,401",563,24.50%/75.44%,116MB/s
+,"28,191",567,27.12%/72.84%,115MB/s
+NVMe/TCP 1Gbit/s WRITE,avg iops,avg lat,cpu,bw
+test script: tcp_write.sh,"28,099",569,24.98%/74.99%,115MB/s
+target script: setup_tcp.sh,"27,904",573,25.41%/74.56%,114MB/s
+,"27,957",572,26.60%/73.37%,114MB/s
+,"28,073",570,25.73%/74.24%,115MB/s
+,"27,959",572,25.36%/74.61%,114MB/s
+NVMe/TCP 25Gbit/s MTU 1500 READ,avg iops,avg lat,cpu,bw
+test script: mellanox_read.sh,"99,890",162,26.74%/73.03%,402MB/s
+target script: setup_mellanox.sh,"99,300",168,27.00%/72.68%,388MB/s
+,"97,400",163,27.16%/72.69%,401MB/s
+,"97,884",161,22.91%/76.98%,405MB/s
+,"97,842",164,26.46%/73.35%,398MB/s
+NVMe/TCP 25Gbit/s MTU 1500 WRITE,avg iops,avg lat,cpu,bw
+test script: mellanox_write.sh,"34,327",465,25.91%/74.00%,141MB/s
+target script: setup_mellanox.sh,"34,372",465,25.06%/74.81%,141MB/s
+,"34,746",459,25.28%/74.59%,142MB/s
+,"34,516",462,26.60%/73.30%,141MB/s
+,"34,146",466,27.11%/72.80%,140MB/s
+NVMe/TCP 25Gbit/s MTU 9978 READ,avg iops,avg lat,cpu,bw
+test script: mellanox_read.sh,"116,463",137,27.76%/72.02%,476MB/s
+target script: setup_mellanox.sh,"113,708",139,27.30%/72.57%,468MB/s
+NOTE: change mtu to 9978,"117,225",137,26.10%/73.68%,476MB/s
+,"115,333",138,29.87%/69.91%,471MB/s
+,"108,420",148,30.09%/69.71%,439MB/s
+NVMe/TCP 25Gbit/s MTU 9978 WRITE,avg iops,avg lat,cpu,bw
+test script: mellanox_read.sh,"34,783",458,26.30%/73.55%,142MB/s
+target script: setup_mellanox.sh,"35,892",449,26.74%/73.18%,146MB/s
+NOTE: change mtu to 9978,"35,344",455,25.36%/74.52%,144MB/s
+,"34,370",465,25.22%/74.66%,141MB/s
+,"33,467",477,27.47%/72.44%,137MB/s
+Localhost READ,avg iops,avg lat,cpu,bw
+test script: localhost_read.sh,802,"19,949",14.91%/35.07%,3285kB/s
+target script: setup_localhost.sh,804,"19,900",14.50%/35.48%,3293kB/s
+,803,"19,920",14.64%/35.34%,3289kB/s
+,804,"19,897",14.64%/35.34%,3293kB/s
+,804,"19,893",15.06%/34.92%,3294kB/s
+Localhost WRITE,avg iops,avg lat,cpu,bw
+test script: localhost_write.sh,804,"19,905",14.62%/35.36%,3291kB/s
+target script: setup_localhost.sh,804,"19,889",15.51%/34.47%,3294kB/s
+,805,"19,885",14.68%/35.30%,3295kB/s
+,804,19895,15.16%/34.82%,3293kB/s
+,804,19890,14.44%/35.54%,3294kB/s
+Localhost CPU mask READ,avg iops,avg lat,cpu,bw
+test script: localhost_read.sh,"223,429",71,29.16%/70.76%,915MB/s
+target script: setup_localhost_cpumask.sh,"223,685",71,29.95%/70.14%,915MB/s
+,"223,541",71,23.46%/76.62%,915MB/s
+,"223,297",71,31.97%/68.03%,915MB/s
+,"223,945",71,30.57%/69.34%,916MB/s
+Localhost CPU mask WRITE,avg iops,avg lat,cpu,bw
+test script: localhost_write.sh,"37,568",426,27.67%/72.24%,154MB/s
+target script: setup_localhost_cpumask.sh,"37,544",426,28.12%/71.82%,154MB/s
+,"37,697",424,27.31%/72.62%,154MB/s
+,"37,483",427,28.59%/71.36%,154MB/s
+,"37,624",425,28.53%/71.41%,154MB/s
